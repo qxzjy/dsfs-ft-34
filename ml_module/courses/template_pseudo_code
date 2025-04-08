@@ -1,0 +1,41 @@
+# test
+
+# Avant predict
+print("R2 score on training set : ", lr.score(X_train, y_train))
+print("R2 score on test set : ", lr.score(X_test, y_test))
+> R2 score on training set :  0.4167165274921716
+> R2 score on test set :  0.4344122018672748
+
+# Après predict
+print("R2 score on training set : ", r2_score(y_train, y_train_pred))
+print("R2 score on test set : ", r2_score(y_test, y_test_pred))
+> R2 score on training set :  0.4167165274921716
+> R2 score on test set :  0.4344122018672748
+
+# import mon dataset 
+# analyser mon dataset : EDA
+    # Je regarde les valeurs manquantes, les valeurs extremes, aberantes
+    # La distribution des variables cat et num. Et la distribution de la variable cible
+    # Corrélation des variables num avec y : .corr()
+    # Corrélation des variables cat avec y : avec des graphs 
+    # Corrélation des variables entre elles. 
+
+# Je sélectionne les colonnes qui sont utilisables ou facilement utilisable. 
+# Je créé un baseline - premier modèle rapidement mis en place pour comprendre la complexité du problème.
+    # X, y 
+    # train_test_split - X_train, X_test, y_train, y_test. stratify ? 
+    # Preprocessing : 
+        # rajouter trimage des valeurs extrêmes
+        # num -> standardisées / imputation des valeurs 
+        # cat -> One hot encoder / imputation des valeurs
+        # on applique la pipeline 
+
+    # Régression linéaire : fiter X_train, y_train 
+    # y_train_pred = lr.predict(X_train)
+    # On regarde le score de r2 de : Train test / r2(y_train, y_train_pred), r2(y_test, y_test_pred)
+    # 1 - (SSR / SST) : SSR somme(y - y_chapeau)carré / SST sommme(y - y_bar)carré : 0/4
+
+# On compare r2_train et r2_test - overfitting - train > test
+# On analyse les valeurs de coefficients avec un barplot pour comprendre ce qu'on aurait manqué dans l'analyse
+# On cherche à comprendre quelles sont les lignes pour lesquelles mon model se trompe beaucoup et pourquoi ? Est-ce que si moi en tant qu'humain
+# j'avais à prédire à la place du modèle je serais capable de faire mieux. 
