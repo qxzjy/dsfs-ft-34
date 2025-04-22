@@ -1,0 +1,103 @@
+digraph {
+	graph [size="12.9,12.9"]
+	node [align=left fontname=monospace fontsize=10 height=0.2 ranksep=0.1 shape=box style=filled]
+	4874613232 [label="
+ (10, 1)" fillcolor=darkolivegreen1]
+	5122567680 [label=SigmoidBackward0]
+	5122559328 -> 5122567680
+	5122559328 [label=AddmmBackward0]
+	5122571568 -> 5122559328
+	5124045728 [label="dense3.bias
+ (1)" fillcolor=lightblue]
+	5124045728 -> 5122571568
+	5122571568 [label=AccumulateGrad]
+	5122567296 -> 5122559328
+	5122567296 [label=CatBackward0]
+	5122571856 -> 5122567296
+	5122571856 [label=ReluBackward0]
+	5122562496 -> 5122571856
+	5122562496 [label=AddmmBackward0]
+	5122558896 -> 5122562496
+	5124044928 [label="dense2a.bias
+ (4)" fillcolor=lightblue]
+	5124044928 -> 5122558896
+	5122558896 [label=AccumulateGrad]
+	5122570272 -> 5122562496
+	5122570272 [label=MulBackward0]
+	5122559424 -> 5122570272
+	5122559424 [label=NativeBatchNormBackward0]
+	5122564704 -> 5122559424
+	5122564704 [label=ReluBackward0]
+	5122556832 -> 5122564704
+	5122556832 [label=AddmmBackward0]
+	5122557600 -> 5122556832
+	5124044608 [label="dense1.bias
+ (8)" fillcolor=lightblue]
+	5124044608 -> 5122557600
+	5122557600 [label=AccumulateGrad]
+	5122556016 -> 5122556832
+	5122556016 [label=TBackward0]
+	5122556112 -> 5122556016
+	5119273584 [label="dense1.weight
+ (8, 2)" fillcolor=lightblue]
+	5119273584 -> 5122556112
+	5122556112 [label=AccumulateGrad]
+	5122564656 -> 5122559424
+	4937476320 [label="bn.weight
+ (8)" fillcolor=lightblue]
+	4937476320 -> 5122564656
+	5122564656 [label=AccumulateGrad]
+	5122559520 -> 5122559424
+	5115498704 [label="bn.bias
+ (8)" fillcolor=lightblue]
+	5115498704 -> 5122559520
+	5122559520 [label=AccumulateGrad]
+	5122566672 -> 5122562496
+	5122566672 [label=TBackward0]
+	5122557792 -> 5122566672
+	4388254192 [label="dense2a.weight
+ (4, 8)" fillcolor=lightblue]
+	4388254192 -> 5122557792
+	5122557792 [label=AccumulateGrad]
+	5122571808 -> 5122567296
+	5122571808 [label=ReluBackward0]
+	5122564560 -> 5122571808
+	5122564560 [label=AddmmBackward0]
+	5122559904 -> 5122564560
+	5124045328 [label="dense2c.bias
+ (4)" fillcolor=lightblue]
+	5124045328 -> 5122559904
+	5122559904 [label=AccumulateGrad]
+	5122558464 -> 5122564560
+	5122558464 [label=ReluBackward0]
+	5122557936 -> 5122558464
+	5122557936 [label=AddmmBackward0]
+	5122558368 -> 5122557936
+	5124045168 [label="dense2b.bias
+ (4)" fillcolor=lightblue]
+	5124045168 -> 5122558368
+	5122558368 [label=AccumulateGrad]
+	5122570272 -> 5122557936
+	5122558032 -> 5122557936
+	5122558032 [label=TBackward0]
+	5122570032 -> 5122558032
+	5124045008 [label="dense2b.weight
+ (4, 8)" fillcolor=lightblue]
+	5124045008 -> 5122570032
+	5122570032 [label=AccumulateGrad]
+	5122561488 -> 5122564560
+	5122561488 [label=TBackward0]
+	5122569984 -> 5122561488
+	5124045488 [label="dense2c.weight
+ (4, 4)" fillcolor=lightblue]
+	5124045488 -> 5122569984
+	5122569984 [label=AccumulateGrad]
+	5122556688 -> 5122559328
+	5122556688 [label=TBackward0]
+	5122557264 -> 5122556688
+	5124045408 [label="dense3.weight
+ (1, 8)" fillcolor=lightblue]
+	5124045408 -> 5122557264
+	5122557264 [label=AccumulateGrad]
+	5122567680 -> 4874613232
+}
