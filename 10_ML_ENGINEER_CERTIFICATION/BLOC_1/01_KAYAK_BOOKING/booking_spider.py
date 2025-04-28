@@ -4,59 +4,47 @@ import argparse
 import scrapy
 from scrapy.crawler import CrawlerProcess
 
-urls_list = []
-base_url = "https://www.booking.com/searchresults.fr.html?ss="
-
-
-# parser = argparse.ArgumentParser()
-
-# for i in range(5):
-#     parser.add_argument('--city_'+str(i+1), dest='city_'+str(i+1), type=str, help='Add city_'+str(i+1))
-
-# args = parser.parse_args()
-
-# urls_list.append(base_url+args.city_1)
-# urls_list.append(base_url+args.city_2)
-# urls_list.append(base_url+args.city_3)
-# urls_list.append(base_url+args.city_4)
-# urls_list.append(base_url+args.city_5)
-
 class BookingSpider(scrapy.Spider):
 
     name = "booking"
-
-    # start_urls = [
-    #      "https://www.booking.com/searchresults.fr.html?ss=Paris",
-    #      "https://www.booking.com/searchresults.fr.html?ss=Rouen"
-    # ]
 
     custom_settings = {
         "REQUEST_FINGERPRINTER_IMPLEMENTATION": "2.7"
     }
 
     def start_requests(self):
+        # Loading URLs
         urls = load_urls()
         
+        # Iterating on URLs
         for index, url in enumerate(urls):
+            # Setting an index, it will be useful when exporting on a SQL database
             yield scrapy.Request(url=url, callback=self.parse, meta={"city_id":index+1}) 
 
     def parse(self, response):
+        # Getting all hotels in the page
         hotels = response.xpath('/html/body/div[4]/div/div/div/div[2]/div[3]/div[2]/div[2]/div[3]/div[@data-testid="property-card"]')
 
+        # Iterating on each hotel
         for hotel in hotels:
 
+            # Getting URL within the overview
             url = hotel.xpath('div[1]/div[2]/div/div/div[1]/div/div[1]/div/h3/a[@data-testid="title-link"]/@href').get()
 
+            # Following URL to get more infos on the hotel
             yield scrapy.Request(url=url, callback=self.parse_hotel_details, meta={"city_id":response.meta["city_id"]})
         
 
     def parse_hotel_details(self, response):
             
+            # Getting coordinates
             coordinates = response.xpath('//*[@id="map_trigger_header_pin"]/@data-atlas-latlng').get()
 
+            # Retrieving latitude and longitude from coordinates
             latitude = coordinates.split(",")[0]
             longitude = coordinates.split(",")[1]
 
+            # Getting all necessaries info and returning it : name, rating, latitude, longitude, description, URL and index
             yield {
                 'name': response.xpath('//*[@id="hp_hotel_name"]/div/h2/text()').get(),
                 'rating': response.xpath('//*[@id="js--hp-gallery-scorecard"]/a/div/div/div/div[1]/text()').get(),
@@ -88,10 +76,13 @@ process = CrawlerProcess(settings = {
     }
 })
 
+# Function creating and returning a list of URLs based on cities we want infos
 def load_urls():
 
+    # Base of booking search URL
     base_url = "https://www.booking.com/searchresults.fr.html?ss="
 
+    # List of cities we're interested in
     cities_list = ["Mont Saint Michel",
                     "St Malo",
                     "Bayeux",
