@@ -1,0 +1,14 @@
+1st flag : 16faf87e773842b685b6f40ef6e94a6afcdde0f0
+> cat 00.txt
+
+2nd flag : d7201d75ac6e6535ea67ff77ac5c0817a932da73
+> cat ./here/is/your/flag/01.txt 
+
+3rd flag : 07c5e7c47f625bd1bd4b5370db755a3d3147a0e3
+> sh ./get_inside/execute_this_file.sh
+
+4th flag : dc064f9aac2a7488f39d623cb9847a4dde96de51
+> cat ./the_last_flag/README.md
+> curl https://full-stack-assets.s3.eu-west-3.amazonaws.com/Deployment/the_last_flag.py --output the_last_flag.py
+> vi the_last_flag.py
+> python3 the_last_flag.py
