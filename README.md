@@ -1,3 +1,5 @@
 # Jedha Data Science & Engineering Fullstack Repo (dsfs-ft-34)
 
-Initialization of my repo
+Welcome to my repo ! 👋🏻
+
+I'll update all my work from my Data Science & Engineering training 👨🏼‍💻📊
