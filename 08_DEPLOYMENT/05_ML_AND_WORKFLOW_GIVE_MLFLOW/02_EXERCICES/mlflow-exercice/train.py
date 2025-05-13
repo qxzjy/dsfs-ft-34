@@ -1,0 +1,103 @@
+import argparse
+import os
+import pandas as pd
+import time
+import mlflow
+from mlflow.models.signature import infer_signature
+from sklearn.model_selection import train_test_split 
+from sklearn.preprocessing import  StandardScaler, FunctionTransformer, OneHotEncoder
+from sklearn.compose import ColumnTransformer
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.pipeline import Pipeline
+
+
+if __name__ == "__main__":
+
+    # Set your variables for your environment
+    EXPERIMENT_NAME="appointment_cancellation_detector"
+
+    # Set tracking URI to your Hugging Face application
+    mlflow.set_tracking_uri(os.environ["MLFLOW_TRACKING_URI"])
+
+    # Set experiment's info 
+    mlflow.set_experiment(EXPERIMENT_NAME)
+
+    # Get our experiment info
+    experiment = mlflow.get_experiment_by_name(EXPERIMENT_NAME)
+
+    print("training model...")
+    
+    # Time execution
+    start_time = time.time()
+
+    # Call mlflow autolog
+    mlflow.sklearn.autolog() # We won't log models right away
+
+    # Parse arguments given in shell script
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--n_estimators", default=1)
+    parser.add_argument("--min_samples_split", default=2)
+    args = parser.parse_args()
+
+    # Import dataset
+    df = pd.read_csv("https://full-stack-assets.s3.eu-west-3.amazonaws.com/Deployment/doctolib_simplified_dataset_01.csv")
+
+    # X, y split 
+    X = df.iloc[:, 3:-1]
+    y = df.iloc[:, -1].apply(lambda x: 0 if x=="No" else 1)
+
+    # Train / test split 
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2)
+
+    print(df.columns)
+
+    # Preprocessing 
+    def date_processing(df):
+        df = df.copy()
+
+        ## Transform datetime into a number
+        df["ScheduledDay"] = pd.to_datetime(df["ScheduledDay"], yearfirst=True )
+        df["AppointmentDay"] = pd.to_datetime(df["AppointmentDay"], yearfirst=True )
+
+        ## Get the difference between scheduled day and appointment
+        df["time_difference_between_scheduled_and_appointment"] = (df["AppointmentDay"] - df["ScheduledDay"]).dt.days
+
+        ## Remove redundant info 
+        df = df.drop(["ScheduledDay", "AppointmentDay"], axis=1)
+
+        return df 
+
+    date_preprocessor = FunctionTransformer(date_processing)
+
+    # Preprocessing 
+    X_train_after_date_processing = date_processing(X_train)
+    categorical_features = X_train_after_date_processing.select_dtypes("object").columns # Select all the columns containing strings
+    categorical_transformer = OneHotEncoder(drop='first')
+
+    numerical_features = X_train_after_date_processing.select_dtypes("number").columns
+    numerical_transformer = StandardScaler()
+
+    feature_preprocessor = ColumnTransformer(
+        transformers=[
+            ("categorical_transformer", categorical_transformer, categorical_features),
+            ("numerical_transformer", numerical_transformer, numerical_features)
+        ]
+    )
+
+    # Pipeline 
+    n_estimators = int(args.n_estimators)
+    min_samples_split=int(args.min_samples_split)
+
+    model = Pipeline(steps=[
+        ("Dates_preprocessing", date_preprocessor),
+        ('features_preprocessing', feature_preprocessor),
+        ("Regressor",RandomForestClassifier(n_estimators=n_estimators, min_samples_split=min_samples_split))
+    ])
+
+    # Log experiment to MLFlow
+    with mlflow.start_run(experiment_id = experiment.experiment_id) as run:
+        model.fit(X_train, y_train)
+        predictions = model.predict(X_train)
+        
+    print("...Done!")
+    print(f"---Total training time: {time.time()-start_time}")
