@@ -1,0 +1,8 @@
+docker run -it\
+ -v "$(pwd):/home/app"\
+ -e MLFLOW_TRACKING_URI=$MLFLOW_TRACKING_URI\
+ -e PORT=7860\
+ -e AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID\
+ -e AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY\
+ -e MLFLOW_EXPERIMENT_NAME=$MLFLOW_EXPERIMENT_NAME\
+ salary_predictor python train.py
