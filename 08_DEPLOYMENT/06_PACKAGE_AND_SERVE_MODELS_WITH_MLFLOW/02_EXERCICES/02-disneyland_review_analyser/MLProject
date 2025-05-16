@@ -1,0 +1,16 @@
+name: disneyland-reviews
+docker_env:
+  image: jedha/tensorflow-simple-image
+  environment: [
+    "MLFLOW_TRACKING_URI",
+    "AWS_ACCESS_KEY_ID",
+    "AWS_SECRET_ACCESS_KEY",
+    "BACKEND_STORE_URI",
+    "ARTIFACT_ROOT"
+  ]
+entry_points:
+  main:
+    parameters:
+      initial_lr: {type: float, default: 0.0001}
+      epochs: {type: int, default: 1}
+    command: "python train_disney_solution.py --epochs {epochs}  --initial_lr {initial_lr}"

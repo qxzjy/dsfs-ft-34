@@ -1,0 +1,12 @@
+boto3
+pandas 
+gunicorn 
+streamlit 
+matplotlib 
+seaborn 
+plotly
+mlflow
+psycopg2-binary
+jupyter
+tensorflow
+tensorflow_hub
