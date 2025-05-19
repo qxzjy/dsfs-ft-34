@@ -1,7 +1,8 @@
-import pandas as pd 
+import pandas as pd
+import mlflow
 from pydantic import BaseModel
-from typing import Literal, List
-from fastapi import FastAPI
+from typing import Literal, List, Union
+from fastapi import FastAPI, File, UploadFile
 
 description = """
 This API provide endpoints allowing to build an interactive Dashboard that will help HR know who are their employees and which ones are likely to quit.
@@ -28,7 +29,11 @@ tags_metadata = [
     {
         "name": "Data operations",
         "description": "Endpoints allowing to make operations on Data (groupBy, filterBy, quantile)"
-    }   
+    },
+    {
+        "name": "Machine-Learning",
+        "description": "Endpoints that uses our Machine Learning model for detecting attrition",
+    }
 ]
 
 app = FastAPI(
@@ -50,6 +55,41 @@ class FilterBy(BaseModel):
     column: str
     category: List[str]
 
+class PredictionFeatures(BaseModel):
+    Age: Union[int, float]
+    BusinessTravel: str
+    DailyRate: Union[int, float]
+    Department: str
+    DistanceFromHome: Union[int, float]
+    Education: Union[int, float]
+    EducationField: str
+    EmployeeCount: Union[int, float]
+    EmployeeNumber: Union[int, float]
+    EnvironmentSatisfaction: Union[int, float]
+    Gender: str
+    HourlyRate: Union[int, float]
+    JobInvolvement: Union[int, float]
+    JobLevel: Union[int, float]
+    JobRole: str
+    JobSatisfaction: Union[int, float]
+    MaritalStatus: str
+    MonthlyIncome: Union[int, float]
+    MonthlyRate: Union[int, float]
+    NumCompaniesWorked: Union[int, float]
+    Over18: str
+    OverTime: str
+    PercentSalaryHike: Union[int, float]
+    PerformanceRating: Union[int, float]
+    RelationshipSatisfaction: Union[int, float]
+    StandardHours: Union[int, float]
+    StockOptionLevel: Union[int, float]
+    TotalWorkingYears: Union[int, float]
+    TrainingTimesLastYear: Union[int, float]
+    WorkLifeBalance: Union[int, float]
+    YearsAtCompany: Union[int, float]
+    YearsInCurrentRole: Union[int, float]
+    YearsSinceLastPromotion: Union[int, float]
+    YearsWithCurrManager: Union[int, float]
 
 @app.get("/preview", tags=["EDA"])
 async def preview_employees(rows: int=5):
@@ -127,3 +167,49 @@ async def quantile(column: str , percentage: float, top: bool = True):
         dataset = dataset[dataset[column] < dataset[column].quantile(percentage)]
 
     return dataset.to_json()
+
+@app.post("/predict", tags=["Machine-Learning"])
+async def predict(predictionFeatures: PredictionFeatures):
+    """
+    Prediction for one observation. Endpoint will return a dictionnary like this:
+
+    ```
+    {'prediction': PREDICTION_VALUE[0,1]}
+    ```
+
+    You need to give this endpoint all columns values as dictionnary, or form data.
+    """
+    # Read data
+    # df = pd.DataFrame(dict(predictionFeatures), index=[0])
+    df = pd.DataFrame([predictionFeatures.dict()])
+    # Log model from mlflow
+    logged_model = "runs:/19dba1d0105647bc9698ba0d9cdefa1c/ibm_attrition_detector"
+
+    # Load model as a PyFuncModel.
+    loaded_model = mlflow.pyfunc.load_model(logged_model)
+
+    # prediction = loaded_model.predict(df)
+    prediction = loaded_model.predict(pd.DataFrame(df))
+
+    # Format response
+    response = {"prediction": prediction.tolist()[0]}
+    return response
+
+
+@app.post("/batch-predict", tags=["Machine-Learning"])
+async def batch_predict(file: UploadFile = File(...)):
+    """
+    Make prediction on a batch of observation. This endpoint accepts only **csv files** containing
+    all the trained columns WITHOUT the target variable.
+    """
+    # Read file
+    df = pd.read_csv(file.file)
+
+    # Log model from mlflow
+    logged_model = "runs:/19dba1d0105647bc9698ba0d9cdefa1c/ibm_attrition_detector"
+
+    # Load model as a PyFuncModel.
+    loaded_model = mlflow.pyfunc.load_model(logged_model)
+    predictions = loaded_model.predict(pd.DataFrame(df))
+
+    return predictions.tolist()
