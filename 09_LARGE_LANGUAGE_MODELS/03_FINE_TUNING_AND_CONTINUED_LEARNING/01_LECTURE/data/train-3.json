@@ -1,0 +1,82 @@
+[
+    {
+        "instruction": "Describe the main programs offered by Jedha Bootcamp.",
+        "input": "",
+        "output": "Jedha Bootcamp offers several programs, including Essentials (for beginners in data), Fullstack (a comprehensive data science and machine learning course), Lead (covering advanced topics like big data and cloud computing), and Cybersecurity (focused on information security and ethical hacking). Each program is tailored to meet various learning and career needs."
+    },
+    {
+        "instruction": "What is the difference between the Fullstack and Lead programs at Jedha?",
+        "input": "",
+        "output": "The Fullstack program covers foundational data science, machine learning, and analytics skills, while the Lead program goes further, introducing advanced topics like big data processing (using Spark, Hadoop), cloud computing, and model deployment for more specialized data engineering or senior data science roles."
+    },
+    {
+        "instruction": "List the types of career support Jedha Bootcamp provides.",
+        "input": "",
+        "output": "Jedha provides personalized career coaching, resume and LinkedIn profile reviews, mock interviews, technical test preparation, networking events, and job placement support to help students transition into the workforce."
+    },
+    {
+        "instruction": "Does Jedha Bootcamp offer a flexible schedule for working professionals?",
+        "input": "",
+        "output": "Yes, Jedha offers both full-time (10-14 weeks) and part-time (24 weeks) programs. Part-time classes are held during evenings and weekends, making it ideal for working professionals or students with busy schedules."
+    },
+    {
+        "instruction": "What type of projects will I work on in the Fullstack program?",
+        "input": "",
+        "output": "In the Fullstack program, you will work on projects involving data analysis, machine learning model development, data visualization, and sometimes basic model deployment. Projects are designed to build a portfolio that showcases your skills to future employers."
+    },
+    {
+        "instruction": "Explain the cybersecurity track offered at Jedha Bootcamp.",
+        "input": "",
+        "output": "Jedha’s Cybersecurity track focuses on foundational cybersecurity knowledge, including information security, network security, and ethical hacking practices. It’s aimed at those interested in protecting digital systems and pursuing roles in cybersecurity."
+    },
+    {
+        "instruction": "How much does Jedha Bootcamp cost?",
+        "input": "",
+        "output": "The cost varies depending on the program and location, but Jedha provides a range of payment plans and occasionally has financing options. It’s best to check their website or contact admissions for the most up-to-date pricing."
+    },
+    {
+        "instruction": "Do I need prior experience in tech to join Jedha Bootcamp?",
+        "input": "",
+        "output": "No, Jedha’s Essentials and Fullstack programs are designed for beginners. While prior experience can be helpful, the bootcamp covers foundational knowledge to help students without a tech background succeed."
+    },
+    {
+        "instruction": "What are the typical job outcomes for Jedha graduates?",
+        "input": "",
+        "output": "Graduates from Jedha Bootcamp often find roles as Data Scientists, Data Analysts, Machine Learning Engineers, Data Engineers, and Cybersecurity Analysts. Many graduates secure positions within a few months of completing the program, especially within Europe."
+    },
+    {
+        "instruction": "Does Jedha Bootcamp offer online courses?",
+        "input": "",
+        "output": "Yes, Jedha offers both online and in-person classes, providing flexibility for remote students. The online format includes live, interactive sessions led by instructors to ensure students have support throughout the learning process."
+    },
+    {
+        "instruction": "How long does it take to complete the Jedha Fullstack program?",
+        "input": "",
+        "output": "The Fullstack program at Jedha Bootcamp can be completed in around 10-14 weeks if taken full-time or 24 weeks if taken part-time."
+    },
+    {
+        "instruction": "Are there financing options available for Jedha Bootcamp?",
+        "input": "",
+        "output": "Yes, Jedha offers financing options and payment plans. In some cases, they also partner with financial institutions to help students manage tuition costs."
+    },
+    {
+        "instruction": "Can I audit classes at Jedha Bootcamp before enrolling?",
+        "input": "",
+        "output": "Jedha sometimes offers introductory workshops or information sessions where prospective students can experience a sample of the teaching style and content. It’s best to check their website for current offerings."
+    },
+    {
+        "instruction": "What qualifications do Jedha instructors have?",
+        "input": "",
+        "output": "Jedha instructors are experienced professionals in data science, machine learning, and cybersecurity fields, often with industry experience. They bring practical knowledge to their teaching, ensuring students learn skills that are relevant to the job market."
+    },
+    {
+        "instruction": "Describe the typical day in a full-time Jedha Bootcamp program.",
+        "input": "",
+        "output": "A typical day in a full-time program involves morning lectures, hands-on lab sessions, and project work in the afternoon. Instructors are available to answer questions, and students collaborate on projects, with time set aside for reviews and assessments."
+    },
+    {
+        "instruction": "What programming languages are taught at Jedha Bootcamp?",
+        "input": "",
+        "output": "Jedha Bootcamp primarily teaches Python for data science and machine learning. The Cybersecurity track may also introduce languages and tools relevant to security, such as Bash scripting and network protocols."
+    }
+]

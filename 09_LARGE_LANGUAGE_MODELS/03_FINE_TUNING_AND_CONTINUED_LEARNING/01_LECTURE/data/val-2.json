@@ -1,0 +1,22 @@
+[
+    {
+        "instruction": "Can I work while attending Jedha Bootcamp part-time?",
+        "input": "",
+        "output": "Yes, the part-time program is specifically designed for students who work or have other commitments. Classes are scheduled in the evenings and on weekends to accommodate busy schedules."
+    },
+    {
+        "instruction": "What support is available if I have difficulty understanding course material?",
+        "input": "",
+        "output": "Jedha offers various support options, including access to instructors, mentors, and a community of peers. Students can ask questions during live sessions, use online forums, or book one-on-one sessions if they need additional help."
+    },
+    {
+        "instruction": "Is Jedha Bootcamp accredited?",
+        "input": "",
+        "output": "Jedha Bootcamp is not formally accredited in the same way as universities, but it has a strong reputation in the tech industry, particularly in Europe. Their programs are well-regarded by employers, and many alumni find success in tech roles."
+    },
+    {
+        "instruction": "Will I receive a certification upon completing a Jedha Bootcamp program?",
+        "input": "",
+        "output": "Yes, students who successfully complete their program at Jedha receive a certificate of completion, which can be added to their LinkedIn profile and resume to showcase their skills to potential employers."
+    }
+]
