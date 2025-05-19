@@ -1,0 +1,382 @@
+[
+    {
+        "instruction": "Recommend a smartphone with a high-quality camera for under $800.",
+        "input": "Budget-friendly smartphone with a focus on camera quality.",
+        "output": "Apple iPhone 13, Samsung Galaxy S21"
+    },
+    {
+        "instruction": "Suggest a lightweight laptop suitable for frequent travel.",
+        "input": "Laptop with portability as the main priority.",
+        "output": "Dell XPS 13, MacBook Air"
+    },
+    {
+        "instruction": "I need a waterproof jacket for hiking on a budget.",
+        "input": "Looking for a low-cost jacket that is waterproof and suitable for hiking.",
+        "output": "Columbia Watertight II Jacket"
+    },
+    {
+        "instruction": "Recommend a mirrorless camera for high-quality photography under $1000.",
+        "input": "Seeking a camera with excellent image quality and a reasonable price.",
+        "output": "Sony Alpha a6400, Canon EOS R10"
+    },
+    {
+        "instruction": "Looking for running shoes that are breathable and good for long-distance running.",
+        "input": "Breathable, comfortable running shoes for endurance.",
+        "output": "Nike Air Zoom Pegasus 39, Adidas Ultraboost 21"
+    },
+    {
+        "instruction": "Suggest a laptop with at least 16GB RAM and a powerful processor for professional work.",
+        "input": "Laptop needed for professional use with high memory and performance.",
+        "output": "Dell XPS 13, MacBook Air"
+    },
+    {
+        "instruction": "I need a comfortable and stylish jacket for winter weather.",
+        "input": "Stylish winter jacket for warmth and comfort.",
+        "output": "Patagonia Nano Puff Jacket"
+    },
+    {
+        "instruction": "Recommend a camera that has reliable autofocus for videography.",
+        "input": "Looking for a camera with fast autofocus for high-quality video recording.",
+        "output": "Sony Alpha a6400, Canon EOS R10"
+    },
+    {
+        "instruction": "Suggest a smartphone with a high refresh rate display for smooth visuals.",
+        "input": "Smartphone with high refresh rate for visual smoothness.",
+        "output": "Samsung Galaxy S21"
+    },
+    {
+        "instruction": "Looking for running shoes that provide excellent energy return.",
+        "input": "Shoes with cushioning and energy return suitable for runners.",
+        "output": "Adidas Ultraboost 21"
+    },
+    {
+        "instruction": "Suggest a camera under $1200 that performs well in low-light conditions.",
+        "input": "Camera needed with strong low-light capabilities under a budget of $1200.",
+        "output": "Canon EOS R10"
+    },
+    {
+        "instruction": "I'm looking for a laptop that balances power and portability for graphic design.",
+        "input": "Graphic design laptop that is portable and powerful.",
+        "output": "MacBook Air, Dell XPS 13"
+    },
+    {
+        "instruction": "Recommend a lightweight, packable jacket for rainy conditions.",
+        "input": "Jacket that is packable and waterproof, suitable for travel.",
+        "output": "Columbia Watertight II Jacket"
+    },
+    {
+        "instruction": "I need a high-performance running shoe for road running.",
+        "input": "Running shoe optimized for road surfaces with high performance.",
+        "output": "Nike Air Zoom Pegasus 39"
+    },
+    {
+        "instruction": "Can you suggest an eco-friendly jacket for outdoor activities?",
+        "input": "Sustainable, eco-friendly jacket for outdoor use.",
+        "output": "Patagonia Nano Puff Jacket"
+    },
+    {
+        "instruction": "Recommend a high-resolution camera suitable for professional photography.",
+        "input": "Camera with high resolution and suitable for professional use.",
+        "output": "Sony Alpha a6400, Canon EOS R10"
+    },
+    {
+        "instruction": "I'm looking for a stylish and functional smartphone under $800.",
+        "input": "Smartphone needed with style and functionality under $800.",
+        "output": "Apple iPhone 13, Samsung Galaxy S21"
+    },
+    {
+        "instruction": "Suggest a waterproof jacket that is affordable and reliable.",
+        "input": "Affordable, waterproof jacket that can withstand rain.",
+        "output": "Columbia Watertight II Jacket"
+    },
+    {
+        "instruction": "I need running shoes that offer great cushioning for long-distance runs.",
+        "input": "Running shoes with excellent cushioning for distance running.",
+        "output": "Adidas Ultraboost 21, Nike Air Zoom Pegasus 39"
+    },
+    {
+        "instruction": "Recommend a camera for an amateur photographer under $900.",
+        "input": "Budget-friendly camera suitable for beginners.",
+        "output": "Sony Alpha a6400"
+    },
+    {
+        "instruction": "Looking for a high-end laptop for professional-level video editing.",
+        "input": "Laptop needed with high processing power and memory for video editing.",
+        "output": "Dell XPS 13"
+    },
+    {
+        "instruction": "I want a camera with 4K video capability for under $1000.",
+        "input": "Camera for recording high-resolution videos at 4K quality within budget.",
+        "output": "Canon EOS R10, Sony Alpha a6400"
+    },
+    {
+        "instruction": "Recommend a comfortable and durable laptop for general office use.",
+        "input": "Laptop that is durable and suitable for daily office tasks.",
+        "output": "MacBook Air"
+    },
+    {
+        "instruction": "Suggest an affordable smartphone with reliable performance and a good display.",
+        "input": "Budget smartphone with balanced performance and display quality.",
+        "output": "Samsung Galaxy S21"
+    },
+    {
+        "instruction": "I'm looking for a versatile jacket that can handle varying temperatures.",
+        "input": "Jacket needed for varying weather conditions, light insulation preferred.",
+        "output": "Patagonia Nano Puff Jacket"
+    },
+    {
+        "instruction": "Suggest a smartphone that is easy to use and great for photography.",
+        "input": "Looking for a user-friendly smartphone with excellent camera quality.",
+        "output": "Apple iPhone 13"
+    },
+    {
+        "instruction": "Recommend a laptop under $1200 suitable for both work and light gaming.",
+        "input": "Laptop with a balance of performance for work tasks and light gaming.",
+        "output": "Dell XPS 13"
+    },
+    {
+        "instruction": "I need a camera for action shots, ideally with fast autofocus.",
+        "input": "Seeking a camera optimized for quick focus and capturing action.",
+        "output": "Sony Alpha a6400"
+    },
+    {
+        "instruction": "Looking for waterproof running shoes that can handle rough terrains.",
+        "input": "Shoes with waterproofing and rugged design for trail running.",
+        "output": "Nike Air Zoom Pegasus 39"
+    },
+    {
+        "instruction": "Can you suggest a smartphone with strong battery life and a large screen?",
+        "input": "Looking for a phone with long battery life and a big display.",
+        "output": "Samsung Galaxy S21"
+    },
+    {
+        "instruction": "Recommend an affordable jacket for cold-weather hiking.",
+        "input": "Jacket that is budget-friendly and suitable for cold-weather outdoor activities.",
+        "output": "Columbia Watertight II Jacket"
+    },
+    {
+        "instruction": "I want a lightweight and eco-friendly jacket for hiking.",
+        "input": "Eco-conscious jacket for hiking, should be lightweight.",
+        "output": "Patagonia Nano Puff Jacket"
+    },
+    {
+        "instruction": "Suggest a camera with 4K video and a high-quality sensor for content creation.",
+        "input": "Camera needed for content creation, with high-resolution video and imaging.",
+        "output": "Canon EOS R10"
+    },
+    {
+        "instruction": "I'm looking for a running shoe with maximum cushioning and support.",
+        "input": "Running shoes needed with enhanced cushioning for support and comfort.",
+        "output": "Adidas Ultraboost 21"
+    },
+    {
+        "instruction": "Recommend a laptop that is great for video calls and general office tasks.",
+        "input": "Laptop with reliable webcam and good performance for daily office work.",
+        "output": "MacBook Air"
+    },
+    {
+        "instruction": "Can you suggest a laptop with good battery life and high processing speed for programming?",
+        "input": "Laptop needed for programming, with emphasis on battery and speed.",
+        "output": "Dell XPS 13, MacBook Air"
+    },
+    {
+        "instruction": "Looking for a stylish yet functional winter jacket for daily wear.",
+        "input": "Winter jacket that combines style with functionality for everyday use.",
+        "output": "Patagonia Nano Puff Jacket"
+    },
+    {
+        "instruction": "Recommend a smartphone that supports 5G and has a strong display quality.",
+        "input": "Smartphone with 5G connectivity and a high-quality display.",
+        "output": "Samsung Galaxy S21"
+    },
+    {
+        "instruction": "Suggest a durable, waterproof jacket that can be packed easily.",
+        "input": "Need a jacket that is waterproof, durable, and packable.",
+        "output": "Columbia Watertight II Jacket"
+    },
+    {
+        "instruction": "Looking for a camera with user-friendly settings for a beginner photographer.",
+        "input": "Beginner-friendly camera with easy settings and high quality.",
+        "output": "Sony Alpha a6400"
+    },
+    {
+        "instruction": "I'm interested in a laptop under $1000 for remote work with video conferencing capabilities.",
+        "input": "Laptop for remote work, with focus on video conferencing and budget-friendly.",
+        "output": "MacBook Air"
+    },
+    {
+        "instruction": "Recommend running shoes that are suitable for both road and trail running.",
+        "input": "Versatile running shoes for road and trail surfaces.",
+        "output": "Nike Air Zoom Pegasus 39"
+    },
+    {
+        "instruction": "I want a stylish smartphone with good performance for social media use.",
+        "input": "Smartphone for social media, should be stylish and perform well.",
+        "output": "Apple iPhone 13"
+    },
+    {
+        "instruction": "Suggest a camera for family photography, ideally with a good zoom lens.",
+        "input": "Camera with zoom capabilities suitable for family photos.",
+        "output": "Canon EOS R10"
+    },
+    {
+        "instruction": "Can you recommend a laptop that is reliable and easy to use for a student?",
+        "input": "Student laptop with reliability and ease of use as priorities.",
+        "output": "MacBook Air"
+    },
+    {
+        "instruction": "I'm looking for a comfortable and stylish pair of shoes for casual outings.",
+        "input": "Casual shoes with style and comfort as the main features.",
+        "output": "Nike Air Zoom Pegasus 39"
+    },
+    {
+        "instruction": "Recommend a smartphone with good storage and battery life for frequent travelers.",
+        "input": "Travel-friendly smartphone with ample storage and strong battery.",
+        "output": "Samsung Galaxy S21"
+    },
+    {
+        "instruction": "I need a laptop with a high-quality display and strong performance for graphic design.",
+        "input": "Laptop with an excellent display and performance for design tasks.",
+        "output": "Dell XPS 13"
+    },
+    {
+        "instruction": "Suggest an insulated jacket for winter hikes in cold climates.",
+        "input": "Insulated jacket designed for warmth during winter hiking.",
+        "output": "Patagonia Nano Puff Jacket"
+    },
+    {
+        "instruction": "Looking for a budget-friendly smartphone with reliable performance.",
+        "input": "Smartphone needed that is cost-effective and reliable.",
+        "output": "Samsung Galaxy S21"
+    },
+    {
+        "instruction": "Recommend a laptop with sufficient RAM and storage for multitasking.",
+        "input": "Laptop needed for multitasking, requiring decent RAM and storage.",
+        "output": "Dell XPS 13"
+    },
+    {
+        "instruction": "I'm looking for a powerful smartphone with fast processing for gaming.",
+        "input": "Smartphone optimized for gaming performance with strong processing power.",
+        "output": "Samsung Galaxy S21"
+    },
+    {
+        "instruction": "Suggest a compact laptop that is easy to carry and perfect for travel.",
+        "input": "Portable laptop for travel, with a focus on compact size.",
+        "output": "Dell XPS 13"
+    },
+    {
+        "instruction": "Can you recommend a professional-looking winter jacket?",
+        "input": "Winter jacket with a polished, professional appearance.",
+        "output": "Patagonia Nano Puff Jacket"
+    },
+    {
+        "instruction": "Looking for an entry-level camera with good autofocus for portraits.",
+        "input": "Beginner camera with quality autofocus, ideal for portrait photography.",
+        "output": "Sony Alpha a6400"
+    },
+    {
+        "instruction": "I need a budget-friendly smartphone that also has a good camera.",
+        "input": "Cost-effective smartphone with a focus on camera quality.",
+        "output": "Samsung Galaxy S21"
+    },
+    {
+        "instruction": "Recommend a lightweight jacket suitable for both hiking and casual wear.",
+        "input": "Jacket for versatile use, both outdoors and casual settings.",
+        "output": "Patagonia Nano Puff Jacket"
+    },
+    {
+        "instruction": "I'm interested in a camera that performs well in low light and is compact.",
+        "input": "Compact camera with strong low-light performance.",
+        "output": "Sony Alpha a6400"
+    },
+    {
+        "instruction": "Suggest a smartphone that supports 5G and has excellent battery life.",
+        "input": "5G smartphone with a focus on long-lasting battery life.",
+        "output": "Samsung Galaxy S21"
+    },
+    {
+        "instruction": "Looking for a laptop that's perfect for streaming and light gaming.",
+        "input": "Laptop optimized for smooth streaming and casual gaming performance.",
+        "output": "MacBook Air"
+    },
+    {
+        "instruction": "Can you recommend a high-quality running shoe for road running?",
+        "input": "Running shoes with durability and comfort for road surfaces.",
+        "output": "Nike Air Zoom Pegasus 39"
+    },
+    {
+        "instruction": "I'm looking for a camera that’s portable and ideal for travel photography.",
+        "input": "Portable camera with features for travel and sightseeing photography.",
+        "output": "Canon EOS R10"
+    },
+    {
+        "instruction": "Recommend a smartphone with a large display that's easy on the eyes.",
+        "input": "Smartphone with a large, visually comfortable display.",
+        "output": "Samsung Galaxy S21"
+    },
+    {
+        "instruction": "Suggest a laptop that can handle photo editing and occasional video editing.",
+        "input": "Laptop suitable for graphic and video editing tasks.",
+        "output": "Dell XPS 13"
+    },
+    {
+        "instruction": "Looking for an eco-friendly, insulated jacket for cold weather.",
+        "input": "Environmentally-conscious jacket with insulation for warmth.",
+        "output": "Patagonia Nano Puff Jacket"
+    },
+    {
+        "instruction": "Can you recommend shoes with good arch support for long runs?",
+        "input": "Running shoes with strong arch support for endurance running.",
+        "output": "Adidas Ultraboost 21"
+    },
+    {
+        "instruction": "I'm searching for a smartphone with a sharp camera and ample storage.",
+        "input": "Smartphone with high-quality camera and extensive storage space.",
+        "output": "Apple iPhone 13"
+    },
+    {
+        "instruction": "Suggest a laptop that’s both powerful and budget-friendly for schoolwork.",
+        "input": "Laptop suitable for students, balancing cost and performance.",
+        "output": "MacBook Air"
+    },
+    {
+        "instruction": "I need a waterproof jacket that's durable enough for rugged outdoor conditions.",
+        "input": "Jacket with waterproofing and durability for tough outdoor activities.",
+        "output": "Columbia Watertight II Jacket"
+    },
+    {
+        "instruction": "Looking for a camera that offers high-quality 4K video recording.",
+        "input": "Camera needed for 4K video capabilities with high clarity.",
+        "output": "Canon EOS R10"
+    },
+    {
+        "instruction": "Recommend a comfortable running shoe with good shock absorption.",
+        "input": "Running shoes with excellent shock absorption for comfortable runs.",
+        "output": "Nike Air Zoom Pegasus 39"
+    },
+    {
+        "instruction": "Suggest a smartphone that’s great for social media, with a high-quality front camera.",
+        "input": "Smartphone with a strong front camera for social media content.",
+        "output": "Apple iPhone 13"
+    },
+    {
+        "instruction": "I'm looking for a laptop with a long battery life and fast charging.",
+        "input": "Laptop that has extended battery life and supports quick charging.",
+        "output": "Dell XPS 13"
+    },
+    {
+        "instruction": "Can you recommend a reliable, waterproof jacket for rainy city commutes?",
+        "input": "Waterproof jacket for urban settings, prioritizing reliability.",
+        "output": "Columbia Watertight II Jacket"
+    },
+    {
+        "instruction": "I'm interested in a camera with quick response time for candid shots.",
+        "input": "Camera with fast shutter and autofocus for capturing candid moments.",
+        "output": "Sony Alpha a6400"
+    },
+    {
+        "instruction": "Recommend a lightweight and durable laptop for long work sessions.",
+        "input": "Laptop designed for extended work use, with emphasis on durability and weight.",
+        "output": "MacBook Air"
+    }
+]

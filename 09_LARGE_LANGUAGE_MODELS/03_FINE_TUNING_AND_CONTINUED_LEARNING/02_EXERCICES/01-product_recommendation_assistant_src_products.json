@@ -1,0 +1,72 @@
+[
+    {
+        "name": "Apple iPhone 13",
+        "category": "Smartphone",
+        "price": "$799",
+        "features": ["5G", "128GB storage", "Dual camera"],
+        "description": "A powerful smartphone with a high-quality camera and fast processing."
+    },
+    {
+        "name": "Samsung Galaxy S21",
+        "category": "Smartphone",
+        "price": "$749",
+        "features": ["5G", "64MP camera", "120Hz display"],
+        "description": "A feature-packed smartphone with a stunning display and powerful camera."
+    },
+    {
+        "name": "Dell XPS 13",
+        "category": "Laptop",
+        "price": "$999",
+        "features": ["13-inch screen", "16GB RAM", "Intel i7"],
+        "description": "A lightweight, powerful laptop ideal for professionals on the go."
+    },
+    {
+        "name": "MacBook Air",
+        "category": "Laptop",
+        "price": "$999",
+        "features": ["13-inch screen", "8GB RAM", "M1 chip"],
+        "description": "A sleek and efficient laptop with long battery life, perfect for everyday tasks."
+    },
+    {
+        "name": "Canon EOS R10",
+        "category": "Camera",
+        "price": "$1100",
+        "features": ["24MP", "Dual Pixel Autofocus", "4K video"],
+        "description": "A versatile mirrorless camera with exceptional image quality, great for professionals."
+    },
+    {
+        "name": "Sony Alpha a6400",
+        "category": "Camera",
+        "price": "$898",
+        "features": ["24.2MP", "Real-time Eye AF", "4K video"],
+        "description": "Compact, feature-rich mirrorless camera ideal for both photography and videography."
+    },
+    {
+        "name": "Nike Air Zoom Pegasus 39",
+        "category": "Running Shoes",
+        "price": "$120",
+        "features": ["Breathable material", "Zoom Air units", "Lightweight"],
+        "description": "Comfortable running shoes designed for both speed and endurance."
+    },
+    {
+        "name": "Adidas Ultraboost 21",
+        "category": "Running Shoes",
+        "price": "$180",
+        "features": ["Boost cushioning", "Primeknit upper", "Responsive"],
+        "description": "High-performance running shoes with excellent energy return and comfort."
+    },
+    {
+        "name": "Columbia Watertight II Jacket",
+        "category": "Outdoor Jacket",
+        "price": "$60",
+        "features": ["Waterproof", "Breathable", "Packable"],
+        "description": "A reliable and affordable waterproof jacket for outdoor adventures."
+    },
+    {
+        "name": "Patagonia Nano Puff Jacket",
+        "category": "Outdoor Jacket",
+        "price": "$199",
+        "features": ["Insulated", "Lightweight", "Eco-friendly materials"],
+        "description": "Lightweight, insulated jacket perfect for cold-weather outdoor activities."
+    }
+]
