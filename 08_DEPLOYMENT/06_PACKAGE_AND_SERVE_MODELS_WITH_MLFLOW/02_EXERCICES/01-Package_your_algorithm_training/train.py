@@ -2,12 +2,12 @@ import argparse
 import pandas as pd
 import time
 import mlflow
+import os
 from mlflow.models.signature import infer_signature
 from sklearn.model_selection import train_test_split 
 from sklearn.preprocessing import  StandardScaler, FunctionTransformer
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.pipeline import Pipeline
-
 
 if __name__ == "__main__":
 
@@ -16,7 +16,7 @@ if __name__ == "__main__":
     mlflow.set_experiment(experiment_name)
     experiment = mlflow.get_experiment_by_name(experiment_name)
 
-    client = mlflow.tracking.MlflowClient()
+    client = mlflow.tracking.MlflowClient(tracking_uri=os.environ["MLFLOW_TRACKING_URI"])
     run = client.create_run(experiment.experiment_id)
 
     print("training model...")
