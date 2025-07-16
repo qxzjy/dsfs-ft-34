@@ -16,12 +16,12 @@ from sklearn.pipeline import Pipeline
 if __name__ == "__main__":
 
     ### MLFLOW Experiment setup
-    experiment_name = "ibm_attrition_detector"
-    mlflow.set_experiment(experiment_name)
-    experiment = mlflow.get_experiment_by_name(experiment_name)
+    # experiment_name = "ibm_attrition_detector_new"
+    # mlflow.set_experiment(experiment_name)
+    # experiment = mlflow.get_experiment_by_name(experiment_name)
 
-    client = mlflow.tracking.MlflowClient(tracking_uri=os.environ["MLFLOW_TRACKING_URI"])
-    run = client.create_run(experiment.experiment_id)
+    # client = mlflow.tracking.MlflowClient()
+    # run = client.create_run(experiment.experiment_id)
 
     print("training model...")
 
@@ -90,7 +90,7 @@ if __name__ == "__main__":
     )
 
     # Log experiment to MLFlow
-    with mlflow.start_run(run_id=run.info.run_id) as run:
+    with mlflow.start_run():
         model.fit(X_train, y_train)
         predictions = model.predict(X_train)
 

@@ -6,7 +6,7 @@ scikit-learn
 matplotlib 
 seaborn 
 plotly
-mlflow
+mlflow==2.22.1
 psycopg2-binary
 jupyter
 openpyxl

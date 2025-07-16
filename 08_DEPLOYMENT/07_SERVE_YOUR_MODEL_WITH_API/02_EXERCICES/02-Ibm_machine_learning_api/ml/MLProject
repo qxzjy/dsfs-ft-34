@@ -8,7 +8,8 @@ docker_env:
       "AWS_ACCESS_KEY_ID",
       "AWS_SECRET_ACCESS_KEY",
       "BACKEND_STORE_URI",
-      "ARTIFACT_ROOT"
+      "ARTIFACT_ROOT",
+      "MLFLOW_EXPERIMENT_NAME"
     ]
 entry_points:
   main:

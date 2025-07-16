@@ -1,0 +1,6 @@
+[submodule "ibmapi"]
+	path = ibmapi
+	url = git@hf.co:semarmehdi/ibmapi.git
+[submodule "mlflowserverapi"]
+	path = mlflowserverapi
+	url = git@hf.co:semarmehdi/mlflowserverapi.git
