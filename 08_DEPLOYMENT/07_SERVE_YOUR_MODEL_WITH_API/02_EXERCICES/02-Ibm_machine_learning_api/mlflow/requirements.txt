@@ -2,7 +2,7 @@ boto3
 pandas 
 gunicorn 
 streamlit 
-scikit-learn
+scikit-learn==1.6.1
 matplotlib 
 seaborn 
 plotly
